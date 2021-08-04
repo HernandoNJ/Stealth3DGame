@@ -1,0 +1,18 @@
+Move a character to a position pointed out with click
+
+void Update()
+{
+  if (Input.GetMouseButtonDown(0))
+  {
+    Ray rayOrigin = Camera.main.ScreenPointToRay(Input.mousePosition);
+    RaycastHit hitInfo;
+    if (Physics.Raycast(rayOrigin, out hitInfo))
+      agent.SetDestination(hitInfo.point);
+
+************************
+Create a new cube after each click
+
+GameObject cube1 = GameObject.CreatePrimitive(PrimitiveType.Cube);
+cube1.transform.position = hitInfo.point;
+
+************************
