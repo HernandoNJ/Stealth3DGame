@@ -4,21 +4,26 @@ using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
+[RequireComponent(typeof(Animator))]
 public class GuardAI : MonoBehaviour
 {
     public List<Transform> waypoints;
     private NavMeshAgent guardAgent;
+    private Animator animator;
     [SerializeField] private Transform newPoint;
     [SerializeField] private float distance;
     [SerializeField] private int currentTarget;
     [SerializeField] private bool reverse;
     [SerializeField] private bool stopMove;
     [SerializeField] private bool targetReached;
+    [SerializeField] private bool isFinalPoint;
 
 
     private void Start()
     {
         guardAgent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
+        animator.SetBool("isWalking",true);
     }
 
     private void Update()
@@ -28,9 +33,13 @@ public class GuardAI : MonoBehaviour
 
     private void MoveToPoint()
     {
-        newPoint = waypoints[currentTarget];
+        newPoint = waypoints[index: currentTarget];
 
-        if (waypoints.Count > 0 && newPoint != null && !stopMove) { guardAgent.SetDestination(newPoint.position); }
+        if (waypoints.Count > 0 && newPoint != null && !stopMove)
+        {
+            guardAgent.SetDestination(target: newPoint.position);
+            var a = Vector3.Distance(a: guardAgent.nextPosition, b: transform.position);
+        }
 
         CheckDistance();
     }
@@ -39,7 +48,10 @@ public class GuardAI : MonoBehaviour
     {
         distance = Vector3.Distance(transform.position, newPoint.position);
 
-        if (distance > 1.0f) targetReached = false;
+        if (distance > 1.0f)
+        {
+            targetReached = false;
+        }
         else if (!targetReached)
         {
             targetReached = true;
@@ -51,13 +63,13 @@ public class GuardAI : MonoBehaviour
     {
         if (currentTarget == waypoints.Count - 1)
         {
-            reverse = true; stopMove = true;
-            StartCoroutine(WaitToMove());
+            reverse = true;
+            StartCoroutine(routine: WaitToMove());
         }
         else if (currentTarget == 0)
         {
-            reverse = false; stopMove = true;
-            StartCoroutine(WaitToMove());
+            reverse = false;
+            StartCoroutine(routine: WaitToMove());
         }
 
         if (reverse) currentTarget--;
@@ -66,8 +78,12 @@ public class GuardAI : MonoBehaviour
 
     private IEnumerator WaitToMove()
     {
-        var randNum = Random.Range(0.5f, 2f);
+        stopMove = true;
+        animator.SetBool("isWalking",false);
+        var randNum = Random.Range(2f, 4f);
         yield return new WaitForSeconds(randNum);
         stopMove = false;
+        animator.SetBool("isWalking",true);
+
     }
 }
