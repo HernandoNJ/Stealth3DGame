@@ -437,6 +437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90fb794a295e73545af71bcdb7375791, type: 3}
   m_Name: CinemachineShot
   m_EditorClassIdentifier: 
+  DisplayName: 
   VirtualCamera:
     exposedName: 1396bb1625eacce4bbfd0ff5eacb7935
     defaultValue: {fileID: 0}
@@ -1070,8 +1071,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 0
   m_Tracks:
-  - {fileID: 7744512067041056136}
   - {fileID: -6166019048601039020}
+  - {fileID: 7744512067041056136}
   - {fileID: 3915842827574288097}
   - {fileID: -22111226244403881}
   - {fileID: 5125600052700995397}
@@ -1294,6 +1295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90fb794a295e73545af71bcdb7375791, type: 3}
   m_Name: CinemachineShot
   m_EditorClassIdentifier: 
+  DisplayName: 
   VirtualCamera:
     exposedName: 246a7b70c7ca99f42abdd6d7ca698b97
     defaultValue: {fileID: 0}

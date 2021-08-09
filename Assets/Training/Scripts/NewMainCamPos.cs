@@ -1,20 +1,13 @@
-using System;
 using UnityEngine;
 
 public class NewMainCamPos : MonoBehaviour
 {
     public Transform camTrigger;
-    public static event Action<Vector3> OnNewCamPos;
+    public GameObject virtualCameras;
     
     private void Start()
     {
-        SendNewCamPos();
-        Debug.Log("Hi there");
+        virtualCameras.SetActive(false);
         Camera.main.transform.position = camTrigger.position;
-    }
-
-    private void SendNewCamPos()
-    {
-        OnNewCamPos?.Invoke(transform.position);
     }
 }

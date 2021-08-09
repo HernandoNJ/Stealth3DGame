@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
     private void Start()
     {
         mainCam = Camera.main;
+        if(mainCam == null) Debug.Log("Main cam is null");
+        Debug.Log("Main cam pos: " + mainCam.transform.position);
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponentInChildren<Animator>();
     }

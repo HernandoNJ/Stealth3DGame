@@ -10,6 +10,7 @@ public class GrabKeyCardActivator : MonoBehaviour
     {
         if(!other.CompareTag("Player")) return;
         sleepingGuardCutscene.SetActive(true);
+        GameManager.Instance.hasCard = true;
     }
 }
 }
