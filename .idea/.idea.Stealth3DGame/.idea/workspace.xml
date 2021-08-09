@@ -18,6 +18,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Training/Scripts/Coin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6fcfdd162b5d4836bef3c96f53194db629fa00/5a/41f6dcdb/DefaultWatcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Training/Scripts/WinStateActivation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Training/Scripts/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CFC1AD89-0650-411E-946C-FF2E6F276711/b8/9102e0a0/WaitForSeconds.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695d1cc93cca45069c528c15c9fdd7493e2800/7c/afa56c6e/ExecutionContextSwitcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CFC1AD89-0650-411E-946C-FF2E6F276711/3d/a0cd6baa/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
@@ -103,7 +104,7 @@
       <workItem from="1628262225340" duration="35849000" />
       <workItem from="1628336125475" duration="15873000" />
       <workItem from="1628484382893" duration="5286000" />
-      <workItem from="1628544435705" duration="980000" />
+      <workItem from="1628544435705" duration="2564000" />
     </task>
     <servers />
   </component>
