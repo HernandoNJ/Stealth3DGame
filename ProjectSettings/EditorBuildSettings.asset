@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Training/Main1/Main1.unity
+    path: Assets/Training/Scenes/MainMenu.unity
+    guid: e52f9fdcebaca2947b517550228e19c6
+  - enabled: 1
+    path: Assets/Training/Scenes/LoadingScreen.unity
+    guid: c4144fc41affad84d9730645b460cb30
+  - enabled: 1
+    path: Assets/Training/Scenes/Main1.unity
     guid: a46388f09ddc98c4fa5fccc9dc8f8a25
   m_configObjects: {}
